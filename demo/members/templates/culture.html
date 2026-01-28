@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Japanese Culture | Kyoto Industries</title>
+    <link rel="stylesheet" href="{% static 'culture.css' %}">
+</head>
+<body>
+
+<nav style="position:fixed; top:0; width:100%; background:rgba(0,0,0,0.7); z-index:100; padding:15px 40px;">
+    <ul style="display:flex; list-style:none; gap:30px; color:#fff;">
+        <li><a href="{% url 'home' %}" style="color:#fff; text-decoration:none;">Home</a></li>
+        <li><a href="{% url 'culture' %}" style="color:#fff; text-decoration:none;">Culture</a></li>
+        <li><a href="{% url 'history' %}" style="color:#fff; text-decoration:none;">History</a></li>
+    </ul>
+</nav>
+
+<header class="hero" style="margin-top:60px;">
+    <div class="overlay"></div>
+    <h1 class="fade">Japanese Culture</h1>
+    <p class="fade delay">Tradition • Harmony • Innovation</p>
+</header>
+
+<section class="culture">
+    <div class="card fade">
+        <h2>🗻 Traditions</h2>
+        <p>
+            Japan’s traditions are deeply rooted in respect, discipline, and harmony.
+            Tea ceremonies, kimono, calligraphy, and bowing customs reflect centuries
+            of cultural refinement.
+        </p>
+    </div>
+
+    <div class="card fade delay">
+        <h2>🌸 Festivals</h2>
+        <p>
+            Festivals like Hanami, Gion Matsuri, and Tanabata celebrate nature,
+            seasons, and spirituality. Cherry blossoms symbolize beauty and
+            the fleeting nature of life.
+        </p>
+    </div>
+
+    <div class="card fade delay-2">
+        <h2>🍣 Cuisine</h2>
+        <p>
+            Japanese food focuses on simplicity and balance. Sushi, ramen,
+            tempura, and matcha tea highlight freshness and presentation.
+        </p>
+    </div>
+
+    <div class="card fade delay-3">
+        <h2>🎎 Art & Lifestyle</h2>
+        <p>
+            From anime and manga to Zen gardens and minimal architecture,
+            Japan blends ancient philosophy with modern creativity.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>Kyoto Industries © <span id="year"></span></p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

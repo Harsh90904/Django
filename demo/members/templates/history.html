@@ -1,0 +1,502 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>History of Japan | Kyoto Industries</title>
+    <link rel="stylesheet" href="{% static 'history.css' %}">
+</head>
+
+<body>
+    <span id="loader">𝓙𝓐𝓟𝓐𝓝𝓐𝓢𝓔</span>
+    <div id="content">
+
+        <nav style="position:fixed; top:0; width:100%; background:rgba(0,0,0,0.7); z-index:100; padding:15px 40px;">
+            <ul style="display:flex; list-style:none; gap:30px; color:#fff;">
+                <li><a href="{% url 'home' %}" style="color:#fff; text-decoration:none;">Home</a></li>
+                <li><a href="{% url 'culture' %}" style="color:#fff; text-decoration:none;">Culture</a></li>
+                <li><a href="{% url 'history' %}" style="color:#fff; text-decoration:none;">History</a></li>
+            </ul>
+        </nav>
+        <header class="hero">
+            <div class="overlay"></div>
+        </header>
+    
+        <div class="dim-history" id="dim-history">
+            <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+            <nav class="decade-filter">
+                <div class="decades">
+                    <button class="decade-btn active" data-decade="2020">Prehistoric and Ancient Japan </button>
+                    <button class="decade-btn" data-decade="2010">Classical Japan (Imperial Rule)</button>
+                    <button class="decade-btn" data-decade="2000">Feudal Japan (Samurai Rule)</button>
+                    <button class="decade-btn" data-decade="1990">Modern Japan</button>
+                </div>
+            </nav>
+    
+            <div class="timeline-wrapper">
+                <div class="timeline">
+                    <div class="japan"></div>
+                    <!-- 2020s -->
+                    <div class="container left" data-decade="2020">
+                        <div class="content">
+                            <h2>Paleolithic Period (c. 40,000 – 14,000 BCE) </h2>
+                            <p>Japan was still connected to the Asian mainland by land bridges.
+                                <b>Lifestyle</b> : Nomadic bands followed megafauna like Naumann’s elephants and giant deer.
+                                <br>
+                                <b>Technology</b>: This is a "Pre-Ceramic" era. People used polished stone axes, which are
+                                among
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/JapanesePolishedStoneAxes.JPG/250px-JapanesePolishedStoneAxes.JPG"
+                                    alt="Paleolithic Period">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container right" data-decade="2020">
+                        <div class="content">
+                            <h2>Jōmon Period (c. 14,000 – 300 BCE) </h2>
+                            <p>As the climate warmed, the "Jōmon culture" emerged, flourishing for over 10,000 years. <br>
+                                <b>Sedentism</b> : Abundant natural resources allowed people to stay in one place, living in
+                                pit
+                                dwellings. <br>
+                                <b>Culture</b> : Notable for Sannai Maruyama, a massive prehistoric village in Aomori. <br>
+                                <b>Spiritualism</b> : They crafted Dogū figurines, believed to be for protection or
+                                fertility.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Stone_statue%2C_late_Jomon_period.JPG/250px-Stone_statue%2C_late_Jomon_period.JPG"
+                                    alt="Jōmon Period">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container left" data-decade="2020">
+                        <div class="content">
+                            <h2>Yayoi Period (c. 300 BCE – 300 CE)</h2>
+                            <p>Migrants from the Korean Peninsula brought the "Neolithic Revolution" to Japan. <br>
+                                <b>Technology</b> : Intensive rice cultivation led to a population boom. Metallurgy arrived
+                                as
+                                bronze (for rituals) and iron (for tools/weapons). <br>
+                                <b>Conflict</b> : Surplus wealth led to "Warring States." Fortified villages like
+                                Yoshinogari
+                                appeared. <br>
+                                <b>First Queens</b> : Chinese chronicles first mention Japan ("Wa"), specifically the
+                                shaman-queen.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Yayoi_ritual_in_Yoshinogari.jpg/330px-Yayoi_ritual_in_Yoshinogari.jpg"
+                                    alt="Yayoi period">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container right" data-decade="2020">
+                        <div class="content">
+                            <h2>Kofun Period (c. 300 – 538 CE) </h2>
+                            <p>The era is defined by Kofun burial mounds, which symbolized the consolidation of power. <br>
+                                <b>Yamato State</b> : A central authority emerged in the Nara region, forming the basis of
+                                the current Imperial line.<br>
+                                <b>Art</b> : Mounds were decorated with Haniwa—clay figures of warriors, horses, and houses.
+                                <br>
+                                <b>Continental Tie</b> : Close contact with the Korean kingdom of Baekje introduced Chinese
+                                characters and writing.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://arsartisticadventureofmankind.wordpress.com/wp-content/uploads/2019/11/6.-paintings.jpg?w=863&h=506"
+                                    alt="Kofun period">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- 2010s -->
+                    <div class="container left" data-decade="2010" style="display: none;">
+                        <div class="content">
+                            <h2>Asuka Period (538–710 CE): The Spiritual Birth</h2>
+                            <p>The arrival of Buddhism from the Korean kingdom of Baekje fundamentally changed Japanese
+                                governance and art. <br>
+                                <b>Prince Shōtoku</b> : The legendary regent who established the Seventeen-Article
+                                Constitution,
+                                blending Buddhist and Confucian ethics. <br>
+                                <b> Hōryū-ji</b> : Built during this time, it remains the world’s oldest wooden structure.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://smarthistory.org/wp-content/uploads/2019/08/Horyuji_temple__%E6%B3%95%E9%9A%86%E5%AF%BA_-_panoramio_16-2.jpg"
+                                    alt="Asuka period">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container right" data-decade="2010" style="display: none;">
+                        <div class="content">
+                            <h2>Nara Period (710–794 CE): The Great Capitals </h2>
+                            <p>Modelled after the Chinese Tang dynasty capital, Nara became a center of learning and
+                                religion. <br>
+                                <b>The Daibutsu</b> : Emperor Shōmu commissioned the Great Buddha at Tōdai-ji, a massive
+                                bronze feat
+                                of engineering. <br>
+                                <b>Literature</b> : The first official histories, the Kojiki and Nihon Shoki, were written
+                                to
+                                legitimize the Imperial line. The Man'yōshū, a collection of 4,500 poems, captured the era's
+                                soul.
+                            </p>
+                            <div class="content-image">
+                                <img src=https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Nara-period_1.jpg?itok=2VEgyiXO"
+                                    alt="Nara Period">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container left" data-decade="2010" style="display: none;">
+                        <div class="content">
+                            <h2>Heian Period (794–1185 CE): The Peak of Elegance</h2>
+                            <p>The capital moved to Heian-kyō (modern-day Kyoto). As direct contact with China declined, a
+                                uniquely Japanese culture blossomed. <br>
+                                <b>Court Culture</b> : The aristocracy obsessed over Miyabi (courtly refinement). Men and
+                                women
+                                communicated through layered silk robes and sophisticated poetry. <br>
+                                <b>Literary Giants</b> : Women of the court, like Murasaki Shikibu, wrote The Tale of Genji,
+                                often
+                                called the world's first novel. <br>
+                                <b>Rise of the Warrior</b> : Toward the end, the central government weakened. Provincial
+                                landowners
+                                hired private guards, leading to the birth of the Samurai and the Genpei War, which ended
+                                the classical age
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/%E8%A5%BF%E5%AF%BA%E5%BE%A9%E5%85%83%E6%A8%A1%E5%9E%8B.jpg"
+                                    alt="Heian Period">
+                            </div>
+                            <small>Miniature model of Heian-kyō, the capital during the Heian period </small>
+                        </div>
+                    </div>
+    
+    
+                    <!-- 2000s -->
+                    <div class="container left" data-decade="2000" style="display: none;">
+                        <div class="content">
+                            <h2>Kamakura Period (1185–1333 CE): The Rise of the Shogunate</h2>
+                            <p>The shift from courtly elegance to military grit began when the Minamoto clan established the
+                                first Bakufu (tent government) in Kamakura. <br>
+                                <b>The First Shogun</b> : Minamoto no Yoritomo seized political control, relegating the
+                                Emperor
+                                to a
+                                purely ceremonial role. <br>
+                                <b>The Mongol Invasions</b> : Japan successfully repelled two massive invasions by Kublai
+                                Khan.
+                                The
+                                legendary storms that destroyed the Mongol fleets were dubbed Kamikaze ("Divine Wind"). <br>
+                                <b>Zen Buddhism</b> : This austere sect gained popularity among warriors for its focus on
+                                discipline and
+                                facing death without fear.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://escapegardendesign.com/egd_wp/wp-content/uploads/2013/03/samurai.jpg"
+                                    alt="Kamakura Period ">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container right" data-decade="2000" style="display: none;">
+                        <div class="content">
+                            <h2>Muromachi Period (1336–1573 CE): Culture Amidst Chaos</h2>
+                            <p>The capital returned to Kyoto, but central authority crumbled, eventually leading to the
+                                Sengoku
+                                Jidai (Warring States Period). <br>
+                                <b> The Golden & Silver Pavilions</b> : Shoguns built iconic structures like Kinkaku-ji and
+                                Ginkaku-ji,
+                                blending religious architecture with residential styles. <br>
+                                <b>Cultural Arts</b> : Despite constant warfare, this era saw the birth of Noh Theater, the
+                                Tea
+                                Ceremony, and professional flower arranging (Ikebana). <br>
+                                <b> Introduction of Firearms</b> : Portuguese traders arrived in 1543, bringing muskets that
+                                would
+                                forever change samurai battlefield tactics.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://i.pinimg.com/474x/4a/7c/31/4a7c311e021ab7df9f19e7d7d8a7d491.jpg"
+                                    alt="Muromachi Period ">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container left" data-decade="2000" style="display: none;">
+                        <div class="content">
+                            <h2>Azuchi-Momoyama Period (1573–1600 CE): The Great Unification
+                            </h2>
+                            <p>A brief, flamboyant era where three "Great Unifiers" brought the warring provinces under a
+                                single sword.
+                                <br>
+                                <b>The Three Unifiers</b> : Oda Nobunaga, Toyotomi Hideyoshi, and Tokugawa Ieyasu ended
+                                centuries of civil war.<br>
+                                <b>Castle Architecture</b> : Warlords built massive, fortified castles like Himeji Castle to
+                                display their overwhelming wealth and power.<br>
+                                <b> Sword Hunts</b> : Hideyoshi disarmed the peasantry, creating a permanent, hereditary
+                                distinction between the samurai and the commoners.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Gusoku_type_armor%2C_Azuchi-Momoyama_to_Edo_period%2C_16th-17th_century%2C_two-piece_cuirass_with_bared-chest_design_-_Tokyo_National_Museum_-_DSC05932.JPG"
+                                    alt="Azuchi-Momoyama Period">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container right" data-decade="2000" style="display: none;">
+                        <div class="content">
+                            <h2>Edo Period (1603–1868 CE): The Great Peace</h2>
+                            <p>The Tokugawa Shogunate established a period of unprecedented stability and strict social
+                                order from their capital in Edo (modern Tokyo).<br>
+                                <b> Sakoku (Isolation)</b> : Japan closed its borders to almost all foreigners for over 200
+                                years to prevent colonial and religious interference.<br>
+                                <b>Bushidō</b> : With no wars to fight, the samurai transitioned into bureaucrats, and their
+                                warrior code, Bushidō, was formally documented.<br>
+                                <b> Ukiyo (The Floating World)</b> : A vibrant urban culture emerged, giving rise to Kabuki
+                                theater, sumo wrestling, and Ukiyo-e (woodblock prints).
+                            </p>
+                            <div class="content-image">
+                                <img src="https://collections.museumsvictoria.com.au/items/397174/media/76454/large"
+                                    alt="Edo Period">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <!-- 1990s -->
+                    <div class="container left" data-decade="1990" style="display: none;">
+                        <div class="content">
+                            <h2>Meiji Period (1868–1912): The Great Transformation</h2>
+                            <p>The Meiji Restoration abolished the Shogunate and restored power to the Emperor, sparking a
+                                total overhaul of Japanese life.
+                                <br>
+                                <b>Modernisation</b> : Japan adopted Western military, legal, and educational systems. The
+                                samurai class was abolished, and the first Imperial Diet (parliament) was established.<br>
+                                <b>Industrial Revolution</b> : Massive investment in railways, telegraphs, and factories
+                                turned Japan into the first non-Western world power.<br>
+                                <b> Global Recognition</b> : Japan’s victories in the Sino-Japanese and Russo-Japanese wars
+                                shocked the world and ended unequal treaties with Western nations.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Ginza_in_1880s.JPG"
+                                    alt="Meiji Period">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container right" data-decade="1990" style="display: none;">
+                        <div class="content">
+                            <h2> Taishō Period (1912–1926): Liberalism & Romanticism</h2>
+                            <p>A brief but vibrant era of "Taishō Democracy" where liberal movements and urban culture
+                                blossomed.<br>
+                                <b>Political Shift</b> : Universal male suffrage was introduced, and political parties
+                                gained more influence over the cabinet.<br>
+                                <b>Modern Life</b> :"Modern Boys" (Mobo) and "Modern Girls" (Moga) embraced Western fashion,
+                                jazz, and cinema in booming cities like Tokyo.<br>
+                                <b> The Great Earthquake</b> : The 1923 Kanto Earthquake devastated Tokyo, leading to a
+                                massive urban reconstruction that further modernized the city.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://www.japan-experience.com/sites/default/files/styles/scale_crop_760x556/public/legacy/japan_experience/1554296698579.jpg.webp?itok=ex8OzW9O"
+                                    alt=" Taishō Period ">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container left" data-decade="1990" style="display: none;">
+                        <div class="content">
+                            <h2>Shōwa Period (1926–1989): War and Rebirth</h2>
+                            <p>The longest era in Japanese history, spanning the extremes of total destruction and
+                                unprecedented prosperity.<br>
+                                <b> Militarism & WWII</b> : Economic depression led to the rise of ultra-nationalism,
+                                culminating in the Pacific War and the atomic bombings of Hiroshima and Nagasaki.<br>
+                                <b>The Occupation</b> : Under US-led Allied occupation (1945–1952), Japan adopted a new
+                                Pacifist Constitution and focused on rebuilding.<br>
+                                <b> The Economic Miracle</b> : By the 1960s, Japan became the world's second-largest
+                                economy, hosting the 1964 Tokyo Olympics and leading in electronics and automotive
+                                industries.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Imperial_general_headquaters_meeting.jpg"
+                                    alt="Shōwa Period">
+                            </div>
+                            <small>Japanese Emperor Hirohito as head of the Imperial General Headquarters on April 29,
+                                1943</small>
+                        </div>
+                    </div>
+    
+                    <div class="container right" data-decade="1990" style="display: none;">
+                        <div class="content">
+                            <h2>Heisei Period (1989–2019): The Era of Maturity & Pop Culture</h2>
+                            <p>The Heisei era ("Achieving Peace") began with the death of Emperor Shōwa and was defined by
+                                economic adjustment and the global export of Japanese cool.<br>
+                                <b> The Bubble Burst</b> : The era opened with the collapse of the asset price bubble,
+                                leading to the "Lost Decades" of economic stagnation.<br>
+                                <b>Cool Japan</b> : apan pivoted from a hardware giant to a cultural superpower. This was
+                                the golden age of Anime, Manga, and Video Games, with franchises like Pokémon and Studio
+                                Ghibli gaining global dominance.<br>
+                                <b>Social Challenges</b> : The period saw a significant shift in demographics, as Japan
+                                became a "super-aging" society with a shrinking birthrate.<br>
+                                <b> Natural Disasters</b> : Two major events defined the national psyche: the 1995 Kobe
+                                Earthquake and the 2011 Great East Japan Earthquake and tsunami, which led to the Fukushima
+                                nuclear crisis.
+    
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Comicmarket49_02.jpg/1280px-Comicmarket49_02.jpg"
+                                    alt="Heisei Period ">
+                            </div>
+                            <small>Comiket 49 doujinshi convention in 1995. The 1990s saw a boom in the international
+                                popularity of anime and manga.</small>
+                        </div>
+                    </div>
+    
+                    <div class="container left" data-decade="1990" style="display: none;">
+                        <div class="content">
+                            <h2> Reiwa Period (2019–Present): Beautiful Harmony</h2>
+                            <p>The Reiwa era ("Beautiful Harmony") began with the historic abdication of Emperor Akihito,
+                                the first in over 200 years.
+                                <br>
+                                <b> Imperial Transition</b> : Emperor Naruhito ascended the throne in May 2019, marking a
+                                modernized transition for the oldest continuous monarchy in the world.<br>
+                                <b>Digital Transformation</b> : The government established a Digital Agency to modernize
+                                Japan’s administrative systems, moving away from traditional paper-and-stamp (hanko)
+                                bureaucracy.<br>
+                                <b>The Pandemic & Olympics</b> : The era was immediately tested by COVID-19, which led to
+                                the unprecedented postponement of the Tokyo 2020 Olympics to 2021.<br>
+                                <b> Global Sustainability</b> : Under the "Green Society" initiative, Japan has pledged to
+                                become carbon neutral by 2050, focusing on hydrogen energy and renewable technology.
+                            </p>
+                            <div class="content-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Passers-by_in_Shinjuku_watch_Reiwa_period_announcement_%281_April_2019%29.jpg/1280px-Passers-by_in_Shinjuku_watch_Reiwa_period_announcement_%281_April_2019%29.jpg"
+                                    alt="Reiwa Period">
+                            </div>
+                            <small>A crowd watching the televised announcement on a giant screen next to Shinjuku
+                                Station</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <footer>
+            <p>Kyoto Industries © <span id="year"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        myFunction();
+        document.getElementById("year").textContent = new Date().getFullYear();
+        (() => {
+            const init = () => {
+                document.querySelectorAll(".dim-history").forEach((root) => {
+                    const indicator = root.querySelector("#scrollIndicator");
+                    const timelineWrapper = root.querySelector(".timeline-wrapper");
+                    const buttons = root.querySelectorAll(".decade-btn");
+                    const cards = root.querySelectorAll(".container");
+
+                    if (!timelineWrapper || !buttons.length || !cards.length) return;
+
+                    // ----- Decade switcher (scoped)
+                    const showDecade = (decade) => {
+                        buttons.forEach((btn) => {
+                            btn.classList.toggle("active", btn.dataset.decade === decade);
+                        });
+
+                        cards.forEach((card) => {
+                            const match = card.dataset.decade === decade;
+                            // Only this component's cards are affected
+                            card.style.display = match ? "" : "none";
+                        });
+
+                        timelineWrapper.scrollIntoView({ behavior: "smooth", block: "start" });
+                    };
+
+                    // Init decade: from active button (or fallback to first)
+                    const initialBtn = root.querySelector(".decade-btn.active") || buttons[0];
+                    const initialDecade = initialBtn ? initialBtn.dataset.decade : null;
+                    if (initialDecade) showDecade(initialDecade);
+
+                    // Handle clicks (scoped)
+                    buttons.forEach((btn) => {
+                        btn.addEventListener("click", (e) => {
+                            e.preventDefault();
+                            const decade = btn.dataset.decade;
+                            if (decade) showDecade(decade);
+                        });
+                    });
+
+                    // ----- Reveal-on-scroll animations (scoped)
+                    const prefersReduced = window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches;
+                    if (!prefersReduced && "IntersectionObserver" in window) {
+                        const io = new IntersectionObserver(
+                            (entries) => {
+                                entries.forEach((entry) => {
+                                    if (entry.isIntersecting) entry.target.classList.add("visible");
+                                });
+                            },
+                            { root: null, rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
+                        );
+
+                        // Observe all cards within this component
+                        cards.forEach((card) => io.observe(card));
+                    } else {
+                        // Fallback: just show all
+                        cards.forEach((card) => card.classList.add("visible"));
+                    }
+
+                    // ----- Scroll indicator (scoped to component height)
+                    const updateIndicator = () => {
+                        if (!indicator) return;
+                        const componentTop = root.offsetTop;
+                        const componentHeight = root.offsetHeight;
+                        const totalScrollable = Math.max(
+                            1,
+                            componentHeight - window.innerHeight
+                        );
+
+                        const scrollY =
+                            window.pageYOffset || document.documentElement.scrollTop || 0;
+                        const scrolledWithin = Math.min(
+                            totalScrollable,
+                            Math.max(0, scrollY - componentTop)
+                        );
+                        const pct = Math.min(
+                            100,
+                            Math.max(0, (scrolledWithin / totalScrollable) * 100)
+                        );
+
+                        indicator.style.width = pct + "%";
+                    };
+
+                    updateIndicator();
+                    window.addEventListener("scroll", updateIndicator, { passive: true });
+                    window.addEventListener("resize", updateIndicator);
+                });
+            };
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", init, { once: true });
+            } else {
+                init();
+            }
+        })();
+        /* 
+            loader
+        */
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
